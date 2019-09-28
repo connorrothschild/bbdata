@@ -17,12 +17,11 @@ bbd_color_list <- c(
   `divblue4` = "#92c5de",
   `divblue3` = "#4393c3",
   `divblue2` = "#2166ac",
-  `primary`  = "#23374d",
-  `black`    = "#240115",
-  `red`      = "#DE3C4B",
-  `blue`     = "#1089ff",
-  `mauve`    = "#C3979F",
-  `emphasis` = "#FFA400"
+  `primary`  = "#DEFFFC",
+  `red`      = "#D72638",
+  `salmon`   = "#EFD0CA",
+  `gold`     = "#D4CB92",
+  `emphasis` = "#00305B"
 )
 
 #' Function to extract `bbd_color_list` colors as hex codes
@@ -46,7 +45,7 @@ bbd_palettes <-
   list(
     `diverging`   = bbd_colors("divred2", "divred3", "divred4", "divred5", "divneutr", "divblue5", "divblue4", "divblue3", "divblue2"),
     `sequential`  = bbd_colors("seqblue1", "seqblue2", "seqblue3", "seqblue4", "seqblue5", "seqblue6", "seqblue7", "seqblue8", "seqblue9"),
-    `categorical` = bbd_colors("primary","black","red", "blue", "mauve",  "emphasis")
+    `categorical` = bbd_colors("primary", "gold", "red", "salmon","emphasis")
   )
 
 #' Bluebonnet Data custom color palettes

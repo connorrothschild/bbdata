@@ -7,7 +7,7 @@
 view_palette(palette = palette_bbd_main)
 }
 \arguments{
-\item{palette}{A \code{palette_bbd_*} vector from \code{library(cr)}.
+\item{palette}{A \code{palette_bbd_*} vector from \code{library(bbdata)}.
 Options are \code{palette_bbd_main}, \code{palette_bbd_diverging}, \code{palette_bbd_politics}, and \code{palette_bbd_sequential}}
 }
 \description{
@@ -15,7 +15,6 @@ Options are \code{palette_bbd_main}, \code{palette_bbd_diverging}, \code{palette
 These palettes were generated on www.coolors.co/.
 }
 \examples{
-view_palette()
 view_palette(palette_bbd_main)
 
 }

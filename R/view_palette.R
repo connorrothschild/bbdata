@@ -3,11 +3,10 @@
 #' \code{view_palette} displays the colors and hexadecimal codes for \code{palette_bbd_*} vectors.
 #' These palettes were generated on www.coolors.co/.
 #'
-#' @param palette A \code{palette_bbd_*} vector from \code{library(cr)}.
+#' @param palette A \code{palette_bbd_*} vector from \code{library(bbdata)}.
 #'   Options are `palette_bbd_main`, `palette_bbd_diverging`, `palette_bbd_politics`, and `palette_bbd_sequential`
 #'
 #' @examples
-#' view_palette()
 #' view_palette(palette_bbd_main)
 #'
 #' @md
