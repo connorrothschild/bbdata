@@ -4,13 +4,13 @@
 \alias{theme_bbd_print}
 \title{A print \link{ggplot2} theme formatted in BBD style}
 \usage{
-theme_bbd_print(base_size = 11, base_family = "Adobe Caslon Pro",
+theme_bbd_print(base_size = 11, base_family = "Raleway",
   base_line_size = 0.5, base_rect_size = 0.5)
 }
 \arguments{
 \item{base_size}{base font size}
 
-\item{base_family}{base font family. Choices are "adobe", "ibm", and "lato"}
+\item{base_family}{base font family. Choices are "ibm", and "raleway"}
 
 \item{base_line_size}{base line}
 

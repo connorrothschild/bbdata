@@ -2,15 +2,15 @@
 % Please edit documentation in R/bbd_font_install.R
 \name{bbd_font_install}
 \alias{bbd_font_install}
-\title{Import and register Adobe Caslon Pro & Lato font}
+\title{Import and register Raleway & IBM Plex Sans font}
 \usage{
 bbd_font_install()
 }
 \description{
-\code{bbd_font_install} tests to see if default fonts imported and registered. If Adobe Caslon Pro & Lato are not imported and registered, then \code{bbd_font_install} imports and registers Adobe Caslon Pro & Lato with \href{https://github.com/wch/extrafont}{library(extrafont)}.
+\code{bbd_font_install} tests to see if default fonts imported and registered. If Raleway & IBM Plex Sans are not imported and registered, then \code{bbd_font_install} imports and registers Raleway & IBM Plex Sans with \href{https://github.com/wch/extrafont}{library(extrafont)}.
 }
 \details{
-Note: Adobe Caslon Pro and Lato must be installed on your computer for \code{bbd_font_install} to work.
+Note: Raleway and IBM Plex Sans must be installed on your computer for \code{bbd_font_install} to work.
 
-Test to see if Adobe Caslon Pro and Lato are imported and registered with \code{bbd_font_test()}.
+Test to see if Raleway and IBM Plex Sans are imported and registered with \code{bbd_font_test()}.
 }

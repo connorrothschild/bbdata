@@ -4,12 +4,12 @@
 #' BBD website.
 #'
 #' @param style The default theme style for the R session. Options are "print" or "map".
-#' @param font The font for plot labels, axes, and titles. Options are "adobe" (Adobe Caslon Pro), "ibm", (IBM Plex Sans), and "lato" (Lato).
+#' @param font The font for plot labels, axes, and titles. Options are "raleway" (Raleway) and "ibm" (IBM Plex Sans).
 #' @import extrafont
 #' @import ggrepel
 #' @md
 #' @export
-set_bbd_theme <- function(style = "print", font = "adobe") {
+set_bbd_theme <- function(style = "print", font = "raleway") {
 
   .onLoad()
 
@@ -27,20 +27,13 @@ set_bbd_theme <- function(style = "print", font = "adobe") {
 
   # add font
 
-  if (font == "adobe") {
-     ggplot2::theme_update(text = ggplot2::element_text(family = "Adobe Caslon Pro"))
-     ggplot2::update_geom_defaults("text", list(family = "Adobe Caslon Pro"))
-     ggplot2::update_geom_defaults("label", list(family = "Adobe Caslon Pro"))
-     #ggplot2::update_geom_defaults("text_repel", list(family = "Adobe Caslon Pro"))
-     #ggplot2::update_geom_defaults("label_repel", list(family = "Adobe Caslon Pro"))
- 
-  } else if (font == "lato") {
-      ggplot2::theme_update(text = ggplot2::element_text(family = "Lato"))
-      ggplot2::update_geom_defaults("text", list(family = "Lato"))
-      ggplot2::update_geom_defaults("label", list(family = "Lato"))
-      #ggplot2::update_geom_defaults("text_repel", list(family = "Lato"))
-      #ggplot2::update_geom_defaults("label_repel", list(family = "Lato"))
-    
+  if (font == "raleway") {
+     ggplot2::theme_update(text = ggplot2::element_text(family = "Raleway"))
+     ggplot2::update_geom_defaults("text", list(family = "Raleway"))
+     ggplot2::update_geom_defaults("label", list(family = "Raleway"))
+     #ggplot2::update_geom_defaults("text_repel", list(family = "Raleway"))
+     #ggplot2::update_geom_defaults("label_repel", list(family = "Raleway"))
+
   } else if (font == "ibm") {
       ggplot2::theme_update(text = ggplot2::element_text(family = "IBM Plex Sans"))
       ggplot2::update_geom_defaults("text", list(family = "IBM Plex Sans"))
@@ -49,7 +42,7 @@ set_bbd_theme <- function(style = "print", font = "adobe") {
       #ggplot2::update_geom_defaults("label_repel", list(family = "IBM Plex Sans"))
       
   } else {
-    stop('Font does not exist. Try "adobe" (Adobe Caslon Pro), "ibm" (IBM Plex Sans), or "lato" (Lato).',
+    stop('Font does not exist. Try "raleway" (Raleway) or "ibm" (IBM Plex Sans).',
          call. = FALSE)
   }
 

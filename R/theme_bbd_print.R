@@ -6,12 +6,12 @@
 #' @import extrafont
 #' @import ggrepel
 #' @md
-#' @param base_family base font family. Choices are "adobe", "ibm", and "lato"
+#' @param base_family base font family. Choices are "ibm", and "raleway"
 #' @param base_size base font size
 #' @param base_line_size base line
 #' @param base_rect_size rectangle sizes
 #' @export
-theme_bbd_print <- function(base_size = 11, base_family = "Adobe Caslon Pro",
+theme_bbd_print <- function(base_size = 11, base_family = "Raleway",
                              base_line_size = 0.5,
                              base_rect_size = 0.5) {
 
