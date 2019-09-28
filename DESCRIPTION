@@ -1,0 +1,36 @@
+Package: bbdata
+Type: Package
+Title: Creates custom ggplot themes in the style of Bluebonnet Data
+Version: 0.1.0
+Authors@R: person("Connor", "Rothschild", email = "connorrothschild@gmail.com",
+    role = c("aut", "cre"))
+URL: https://github.com/connorrothschild/bbdata
+Maintainer: Connor Rothschild <connorrothschild@gmail.com>
+Description: Creates custom ggplot themes in the style of Bluebonnet Data.
+Imports: 
+    ggplot2,
+    gridExtra,
+    extrafont,
+    dplyr,
+    scales,
+    ggrepel,
+    maps,
+    magrittr,
+    RColorBrewer,
+    htmltools,
+    yaml,
+    magick,
+    conflicted,
+    forcats
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    testthat,
+    knitr,
+    grobblR,
+    readr,
+    tibble,
+    devtools
+VignetteBuilder: knitr
