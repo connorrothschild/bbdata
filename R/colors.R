@@ -17,7 +17,7 @@ bbd_color_list <- c(
   `divblue4` = "#92c5de",
   `divblue3` = "#4393c3",
   `divblue2` = "#2166ac",
-  `primary`  = "#DEFFFC",
+  `primary`  = "#929598",
   `red`      = "#D72638",
   `salmon`   = "#EFD0CA",
   `gold`     = "#D4CB92",

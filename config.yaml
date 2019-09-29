@@ -1,19 +1,18 @@
 # configuration for mapping functions
 maps:
   base:
-    fill: "grey90"
+    fill: "#929598"
     color: "gray50"
 
 # palette definition
 palettes:
  cat:
    [
-    ["#DEFFFC"],
-    ["#DEFFFC", "#D4CB92"],
-    ["#DEFFFC", "#D4CB92", "#D72638"],
-    ["#DEFFFC", "#D4CB92", "#D72638", "#EFD0CA"],
-    ["#DEFFFC", "#D4CB92", "#D72638", "#EFD0CA", "#00305B"]
-
+    ["#929598"],
+    ["#929598", "#D4CB92"],
+    ["#929598", "#D4CB92", "#D72638"],
+    ["#929598", "#D4CB92", "#D72638", "#EFD0CA"],
+    ["#929598", "#D4CB92", "#D72638", "#EFD0CA", "#00305B"]
    ]
   seq:
     [
@@ -40,7 +39,7 @@ palettes:
       ["#fff7fb","#ece7f2","#d0d1e6","#a6bddb","#74a9cf","#3690c0","#0570b0","#045a8d","#023858"]
     ]
   bbd_main:
-    primary: "#DEFFFC"
+    primary: "#929598"
     gold: "#D4CB92"
     red: "#D72638"
     salmon: "#EFD0CA"
