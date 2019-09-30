@@ -1,12 +1,21 @@
 ---
 title: "README"
-author: "Connor Rothschild"
-date: "9/30/2019"
-output: md_document
+github_document: 
+  fig_width: 10
+  fig_height: 4.8
+editor_options:
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  fig.align = "center",
+  dpi = 300,
+  warning = FALSE,
+  message = FALSE
+)
 ```
 
 ```{r}
@@ -29,15 +38,19 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
        subtitle = "Using the BBD Color Palette",
        x = "Year",
        y = "GDP Per Capita\n(thousands of $)",
-       fill = "Country") + 
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+       fill = "Country")
 ```
 
 An example using `ggtext`:
 
 ``` {r}
-devtools::install_github("clauswilke/ggtext")
+#devtools::install_github("clauswilke/ggtext")
 library(ggtext)
+
+data <- gapminder::gapminder %>% 
+  filter(year == 2007) %>% 
+  mutate(rank = rank(gdpPercap)) %>% 
+  filter(rank > 132 | rank == 1)
 
 ggplot(data, aes(x = reorder(country, gdpPercap), 
                  y = gdpPercap, 
@@ -47,8 +60,8 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
   coord_flip() +
   labs(y = "GDP per capita",
        x = element_blank(),
-       title = "The Wealthiest Countries",
-       subtitle = "<span style='color:#00315B'>Norway</span> leads, Mexico lags",
+       title = "The Wealthiest (and Poorest) Countries",
+       subtitle = "<span style='color:#00315B'>**Norway**</span> leads, the DRC lags",
        caption = "Source: Gapminder") +
   theme(plot.subtitle = element_markdown(lineheight = 1.1))
 ```
