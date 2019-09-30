@@ -48,12 +48,12 @@ undo_bbd_theme <- function() {
     for (i in scales) {
     conflicted::conflict_prefer(name   = i,
                                 winner = "ggplot2",
-                                loser  = "cr")
+                                loser  = "bbd")
   }
   )
 
   # warning message
 
-  print("All CR defaults were removed and the cr package has been effectively detached from the current environment. To restore CR defaults, use set_bbd_theme().")
+  print("All BBD defaults were removed and the bbdata package has been effectively detached from the current environment. To restore BBD defaults, use set_bbd_theme().")
 
 }
