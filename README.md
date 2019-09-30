@@ -1,6 +1,34 @@
     library(tidyverse)
     library(ggplot2)
     devtools::install_github("connorrothschild/bbdata")
+
+    ## 
+    ##   
+       checking for file ‘/private/var/folders/h7/n3k2fpg93wbf7mdh9q298ksr0000gn/T/Rtmpibmfnp/remotes1052559c5ba44/connorrothschild-bbdata-517ea18/DESCRIPTION’ ...
+      
+    ✔  checking for file ‘/private/var/folders/h7/n3k2fpg93wbf7mdh9q298ksr0000gn/T/Rtmpibmfnp/remotes1052559c5ba44/connorrothschild-bbdata-517ea18/DESCRIPTION’
+    ## 
+      
+    ─  preparing ‘bbdata’:
+    ## 
+      
+       checking DESCRIPTION meta-information ...
+      
+    ✔  checking DESCRIPTION meta-information
+    ## 
+      
+    ─  checking for LF line-endings in source and make files and shell scripts
+    ## 
+      
+    ─  checking for empty or unneeded directories
+    ## 
+      
+    ─  building ‘bbdata_0.1.0.tar.gz’
+    ## 
+      
+       
+    ## 
+
     library(bbdata)
 
     data <- gapminder::gapminder %>% 
@@ -36,7 +64,7 @@ An example using `ggtext`:
       labs(y = "GDP per capita",
            x = element_blank(),
            title = "The Wealthiest Countries",
-           subtitle = "<span style='color:#00305B'>Norway</span> leads, Mexico lags",
+           subtitle = "<span style='color:#00315B'>Norway</span> leads, Mexico lags",
            caption = "Source: Gapminder") +
       theme(plot.subtitle = element_markdown(lineheight = 1.1))
 

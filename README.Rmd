@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```{r}
 library(tidyverse)
 library(ggplot2)
-devtools::install_github("connorrothschild/bbdata")
+#devtools::install_github("connorrothschild/bbdata")
 library(bbdata)
 
 data <- gapminder::gapminder %>% 
@@ -48,7 +48,7 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
   labs(y = "GDP per capita",
        x = element_blank(),
        title = "The Wealthiest Countries",
-       subtitle = "<span style='color:#00305B'>Norway</span> leads, Mexico lags",
+       subtitle = "<span style='color:#00315B'>Norway</span> leads, Mexico lags",
        caption = "Source: Gapminder") +
   theme(plot.subtitle = element_markdown(lineheight = 1.1))
 ```
