@@ -18,12 +18,13 @@ set_bbd_theme()
 ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
   geom_area() +
   scale_x_date(expand = c(0,0)) +
-  scale_y_continuous(expand = c(0, 0)) +
+  fix_bars() +
   labs(title = "GDP Per Capita Over Time",
        subtitle = "Using the BBD Color Palette",
        x = "Year",
        y = "GDP Per Capita\n(thousands of $)",
-       fill = "Country")
+       fill = "Country",
+       caption = "Source: Gapminder")
 ```
 
 <img src="man/figures/README-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
