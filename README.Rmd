@@ -45,7 +45,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
        fill = "Country")
 ```
 
-An example using `ggtext`:
+### An example using `ggtext`:
 
 ``` {r}
 #devtools::install_github("clauswilke/ggtext")
@@ -68,4 +68,14 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
        subtitle = "<span style='color:#00315B'>**Norway**</span> leads, the DRC lags",
        caption = "Source: Gapminder") +
   theme(plot.subtitle = element_markdown(lineheight = 1.1))
+```
+
+### Palettes
+
+```{r}
+p1 <- view_palette(palette = palette_bbd_main) + ggtitle("Categorical")
+p2 <- view_palette(palette = palette_bbd_diverging) + ggtitle("Diverging")
+p3 <- view_palette(palette = palette_bbd_sequential) + ggtitle("Sequential")
+
+gridExtra::grid.arrange(p1, p2, p3, nrow = 1)
 ```

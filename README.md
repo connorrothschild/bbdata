@@ -28,7 +28,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
 
 <img src="man/figures/README-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
 
-An example using `ggtext`:
+### An example using `ggtext`:
 
 ``` r
 #devtools::install_github("clauswilke/ggtext")
@@ -54,3 +54,15 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+
+### Palettes
+
+``` r
+p1 <- view_palette(palette = palette_bbd_main) + ggtitle("Categorical")
+p2 <- view_palette(palette = palette_bbd_diverging) + ggtitle("Diverging")
+p3 <- view_palette(palette = palette_bbd_sequential) + ggtitle("Sequential")
+
+gridExtra::grid.arrange(p1, p2, p3, nrow = 1)
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
