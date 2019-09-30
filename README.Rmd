@@ -1,8 +1,8 @@
 ---
-title: "README"
-github_document: 
-  fig_width: 10
-  fig_height: 4.8
+output:
+  github_document: 
+    fig_width: 10
+    fig_height: 4.8
 editor_options:
   chunk_output_type: console
 ---
