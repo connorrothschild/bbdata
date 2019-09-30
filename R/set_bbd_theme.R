@@ -11,7 +11,7 @@
 #' @export
 set_bbd_theme <- function(style = "print", font = "raleway") {
 
-  .onLoad()
+  #.onLoad()
 
   # set default theme
 
