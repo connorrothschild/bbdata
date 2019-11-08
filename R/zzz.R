@@ -7,8 +7,7 @@
   suppressMessages(
     for (i in scales) {
   conflicted::conflict_prefer(name   = i,
-                              winner = "bbdata",
-                              loser  = "ggplot2")
+                              winner = "bbdata")
     }
   )
 
