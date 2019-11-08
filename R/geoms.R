@@ -4,11 +4,10 @@
 #'
 #' @md
 #' @param mapping mapping from ggplot2
-#' @param width bar width
 #' @param ... other arguments passed to \code{geom_bar()}
 #' @export
-geom_bar <- function(mapping = NULL, width = .75, ...) {
-  ggplot2::geom_bar(mapping = mapping, width = width, ...)
+geom_bar <- function(mapping = NULL, ...) {
+  ggplot2::geom_bar(mapping = mapping, ...)
 }
 
 #' geom_col in BBD style

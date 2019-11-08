@@ -4,12 +4,10 @@
 \alias{geom_bar}
 \title{geom_bar in BBD style}
 \usage{
-geom_bar(mapping = NULL, width = 0.75, ...)
+geom_bar(mapping = NULL, ...)
 }
 \arguments{
 \item{mapping}{mapping from ggplot2}
-
-\item{width}{bar width}
 
 \item{...}{other arguments passed to \code{geom_bar()}}
 }
