@@ -1,7 +1,7 @@
 
 # README
 
-## Examples (In Progress)
+## Examples
 
 ``` r
 library(tidyverse)
@@ -56,6 +56,60 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
+## Add the Bluebonnet Logo
+
+``` r
+set_bbd_theme(style = "Texas")
+
+tx_vac <- readr::read_csv("https://raw.githubusercontent.com/connorrothschild/tpltheme/master/data/tx_vac_example.csv")
+plot <- ggplot(data = tx_vac, aes(x = tx_vac$long, 
+                                  y = tx_vac$lat, 
+                                  group = tx_vac$group, 
+                                  fill = tx_vac$avgvac * 100)) + 
+              coord_fixed(1.3) + 
+              geom_polygon(color = "black") + 
+              labs(title = "Texas Vaccination Rate by County", 
+                   subtitle = "Among Kindergarteners", 
+                   fill = "Percent\nVaccinated")
+
+add_bbd_logo(plot, scale = 1.5, position = "bottom left")
+```
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+
+``` r
+set_bbd_theme(style = "print")
+
+tx_vac_low <- tx_vac %>%
+  group_by(subregion) %>% 
+  summarise(avgvac = mean(avgvac)) %>% 
+  mutate(rank = rank(avgvac)) %>%
+  filter(rank < 10) %>% 
+  arrange(desc(avgvac)) %>% 
+  mutate(subregion = str_to_title(subregion))
+
+plot <- ggplot(data = tx_vac_low, aes(x = reorder(subregion, avgvac),
+                                      y = avgvac,
+                                      fill = ifelse(subregion == "Terry", "1", "0"))) + 
+              geom_col(show.legend = FALSE) + 
+              labs(title = "Texas Vaccination Rate by County", 
+                   subtitle = "Among Kindergarteners") +
+  coord_flip() + 
+  geom_text(aes(label = ifelse(subregion == "Terry", paste0(100*round(tx_vac_low$avgvac, 2), "%"), '')), hjust = -.25) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0,1), labels = scales::percent) +
+  labs(y = "Percent Vaccinated",
+       x = element_blank(),
+       title = "The Least Vaccinated Counties",
+       subtitle = "<span style='color:#00315B'>**Terry County**</span> has the lowest Kindergarten vaccination rate in Texas",
+       caption = "Source: DSHS") +
+  theme(plot.subtitle = element_markdown(lineheight = 1.1),
+        legend.position = "none")
+
+add_bbd_logo(plot, scale = 1.5)
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+
 ### Palettes
 
 ``` r
@@ -66,4 +120,4 @@ p3 <- view_palette(palette = palette_bbd_sequential) + ggtitle("Sequential")
 gridExtra::grid.arrange(p1, p2, p3, nrow = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
