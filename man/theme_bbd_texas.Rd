@@ -4,9 +4,13 @@
 \alias{theme_bbd_texas}
 \title{A Texas shaped \link{ggplot2} theme formatted in BBD style}
 \usage{
-theme_bbd_texas(scale = "continuous", base_size = 12,
-  base_family = "Raleway", base_line_size = 0.5,
-  base_rect_size = 0.5)
+theme_bbd_texas(
+  scale = "continuous",
+  base_size = 12,
+  base_family = "Raleway",
+  base_line_size = 0.5,
+  base_rect_size = 0.5
+)
 }
 \arguments{
 \item{scale}{scale}

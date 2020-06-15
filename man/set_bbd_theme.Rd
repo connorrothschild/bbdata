@@ -4,12 +4,10 @@
 \alias{set_bbd_theme}
 \title{The BBD \link{ggplot2} theme}
 \usage{
-set_bbd_theme(style = "print", font = "raleway")
+set_bbd_theme(style = "print")
 }
 \arguments{
-\item{style}{The default theme style for the R session. Options are "print" or "map".}
-
-\item{font}{The font for plot labels, axes, and titles. Options are "raleway" (Raleway) and "ibm" (IBM Plex Sans).}
+\item{style}{The default theme style for the R session. Options are "print" or "Texas".}
 }
 \description{
 \code{set_bbd_theme} provides a \link{ggplot2} theme formatted according to the

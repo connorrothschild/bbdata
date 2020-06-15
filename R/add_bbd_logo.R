@@ -1,6 +1,6 @@
 #' Bluebonnet Data [ggplot2] theme
 #'
-#' Add TPL logo to a single plot as grid object
+#' Add BBD logo to a single plot as grid object
 #' Modified from https://gist.github.com/Ryo-N7/67ca1c364c342a82c4098918082ca445
 #'
 #' @example \dontrun{
@@ -8,7 +8,7 @@
 #' }
 #'
 #' @param plot The plot object passed to `add_bbd_logo`
-#' @param scale The scale of the TPL logo. Every single integer increase increases the scale multiplier (scale = 2 will double the size of the logo). Use decimals for fine-tuned scaling
+#' @param scale The scale of the BBD logo. Every single integer increase increases the scale multiplier (scale = 2 will double the size of the logo). Use decimals for fine-tuned scaling
 #' @param position The position of the logo. Options are "top left", "top right", "bottom right", and "bottom left"
 #' @md
 #' @export

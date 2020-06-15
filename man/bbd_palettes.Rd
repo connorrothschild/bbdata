@@ -7,7 +7,15 @@
 \alias{palette_bbd_diverging}
 \alias{palette_bbd_sequential}
 \title{List of CR Palettes}
-\format{A \code{list}}
+\format{
+A \code{list}
+
+An object of class \code{character} of length 5.
+
+An object of class \code{character} of length 9.
+
+An object of class \code{character} of length 9.
+}
 \usage{
 bbd_palettes
 

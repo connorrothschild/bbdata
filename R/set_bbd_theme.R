@@ -3,13 +3,12 @@
 #' \code{set_bbd_theme} provides a [ggplot2] theme formatted according to the
 #' BBD website.
 #'
-#' @param style The default theme style for the R session. Options are "print" or "map".
-#' @param font The font for plot labels, axes, and titles. Options are "raleway" (Raleway) and "ibm" (IBM Plex Sans).
+#' @param style The default theme style for the R session. Options are "print" or "Texas".
 #' @import extrafont
 #' @import ggrepel
 #' @md
 #' @export
-set_bbd_theme <- function(style = "print", font = "raleway") {
+set_bbd_theme <- function(style = "print") {
 
   #.onLoad()
 
@@ -26,25 +25,11 @@ set_bbd_theme <- function(style = "print", font = "raleway") {
   }
 
   # add font
-
-  if (font == "raleway") {
      ggplot2::theme_update(text = ggplot2::element_text(family = "Raleway"))
      ggplot2::update_geom_defaults("text", list(family = "Raleway"))
      ggplot2::update_geom_defaults("label", list(family = "Raleway"))
-     #ggplot2::update_geom_defaults("text_repel", list(family = "Raleway"))
-     #ggplot2::update_geom_defaults("label_repel", list(family = "Raleway"))
-
-  } else if (font == "ibm") {
-      ggplot2::theme_update(text = ggplot2::element_text(family = "IBM Plex Sans"))
-      ggplot2::update_geom_defaults("text", list(family = "IBM Plex Sans"))
-      ggplot2::update_geom_defaults("label", list(family = "IBM Plex Sans"))
-      #ggplot2::update_geom_defaults("text_repel", list(family = "IBM Plex Sans"))
-      #ggplot2::update_geom_defaults("label_repel", list(family = "IBM Plex Sans"))
-      
-  } else {
-    stop('Font does not exist. Try "raleway" (Raleway) or "ibm" (IBM Plex Sans).',
-         call. = FALSE)
-  }
+     ggplot2::update_geom_defaults("text_repel", list(family = "Raleway"))
+     ggplot2::update_geom_defaults("label_repel", list(family = "Raleway"))
 
 # select color palette
 
@@ -57,7 +42,7 @@ set_bbd_theme <- function(style = "print", font = "raleway") {
 
 # set colors for single bars, etc.
 
-    config <- yaml::read_yaml("https://raw.githubusercontent.com/connorrothschild/bbdata/master/config.yaml")
+    config <- yaml::read_yaml(here::here("config.yaml"))
 
     ggplot2::update_geom_defaults("bar", list(fill = config$palettes$bbd_main$primary))
     ggplot2::update_geom_defaults("col", list(fill = config$palettes$bbd_main$primary))
