@@ -39,7 +39,8 @@ palettes:
       ["#fff7fb","#ece7f2","#d0d1e6","#a6bddb","#74a9cf","#3690c0","#0570b0","#045a8d","#023858"]
     ]
   bbd_main:
-    primary: "#929598"
+    primary: "#2971EB"
+  # muted: "#929598",
     gold: "#D4CB92"
     red: "#D72638"
     salmon: "#EFD0CA"
