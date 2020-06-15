@@ -10,5 +10,5 @@ bbd_font_test()
 \code{bbd_font_test} tests to see if default fonts are imported and registered.
 }
 \details{
-Import and register fontsin R with bbd_font_install().
+Import and register fonts in R with bbd_font_install().
 }

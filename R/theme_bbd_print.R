@@ -6,7 +6,7 @@
 #' @import extrafont
 #' @import ggrepel
 #' @md
-#' @param base_family base font family. Choices are "ibm", and "raleway"
+#' @param base_family base font family
 #' @param base_size base font size
 #' @param base_line_size base line
 #' @param base_rect_size rectangle sizes

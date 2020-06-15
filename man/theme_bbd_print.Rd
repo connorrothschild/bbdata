@@ -14,7 +14,7 @@ theme_bbd_print(
 \arguments{
 \item{base_size}{base font size}
 
-\item{base_family}{base font family. Choices are "ibm", and "raleway"}
+\item{base_family}{base font family}
 
 \item{base_line_size}{base line}
 
