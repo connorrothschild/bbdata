@@ -42,7 +42,7 @@ set_bbd_theme <- function(style = "print") {
 
 # set colors for single bars, etc.
 
-    config <- yaml::read_yaml(here::here("config.yaml"))
+    config <- yaml::read_yaml("https://raw.githubusercontent.com/connorrothschild/bbdata/master/config.yaml")
 
     ggplot2::update_geom_defaults("bar", list(fill = config$palettes$bbd_main$primary))
     ggplot2::update_geom_defaults("col", list(fill = config$palettes$bbd_main$primary))
