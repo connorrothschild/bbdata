@@ -22,16 +22,17 @@ knitr::opts_chunk$set(
 
 ## Examples
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 library(ggplot2)
 #devtools::install_github("connorrothschild/bbdata")
 library(bbdata)
+library(gapminder)
 
 bbd_font_install(device = 'win', force = TRUE)
 
-data <- gapminder::gapminder %>% 
-  dplyr::filter(gapminder::gapminder$country %in% c("Italy", "Japan", "Norway", "Mexico", "United States")) %>%
+data <- gapminder %>% 
+  dplyr::filter(gapminder$country %in% c("Italy", "Japan", "Norway", "Mexico", "United States")) %>%
   dplyr::mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
 
 set_bbd_theme()
@@ -54,7 +55,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
 #devtools::install_github("clauswilke/ggtext")
 library(ggtext)
 
-data <- gapminder::gapminder %>% 
+data <- gapminder %>% 
   filter(year == 2007) %>% 
   mutate(rank = rank(gdpPercap)) %>% 
   filter(rank > 132 | rank == 1)

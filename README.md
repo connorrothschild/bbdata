@@ -8,9 +8,18 @@ library(tidyverse)
 library(ggplot2)
 #devtools::install_github("connorrothschild/bbdata")
 library(bbdata)
+library(gapminder)
 
-data <- gapminder::gapminder %>% 
-  dplyr::filter(gapminder::gapminder$country %in% c("Italy", "Japan", "Norway", "Mexico", "United States")) %>%
+bbd_font_install(device = 'win', force = TRUE)
+```
+
+    #> Importing fonts may take a few minutes, depending on the number of fonts and the speed of the system.
+    #> Continue? [y/n] 
+    #> [1] "Raleway is imported! We found 1 instances of Raleway on your system."
+
+``` r
+data <- gapminder %>% 
+  dplyr::filter(gapminder$country %in% c("Italy", "Japan", "Norway", "Mexico", "United States")) %>%
   dplyr::mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
 
 set_bbd_theme()
@@ -35,7 +44,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
 #devtools::install_github("clauswilke/ggtext")
 library(ggtext)
 
-data <- gapminder::gapminder %>% 
+data <- gapminder %>% 
   filter(year == 2007) %>% 
   mutate(rank = rank(gdpPercap)) %>% 
   filter(rank > 132 | rank == 1)
