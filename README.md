@@ -6,22 +6,19 @@
 ``` r
 library(tidyverse)
 library(ggplot2)
+
 #devtools::install_github("connorrothschild/bbdata")
 library(bbdata)
 library(gapminder)
 
 bbd_font_install(device = 'win', force = TRUE)
-```
 
-    #> Importing fonts may take a few minutes, depending on the number of fonts and the speed of the system.
-    #> Continue? [y/n] 
-    #> [1] "Raleway is imported! We found 1 instances of Raleway on your system."
-
-``` r
 data <- gapminder %>% 
   dplyr::filter(gapminder$country %in% c("Italy", "Japan", "Norway", "Mexico", "United States")) %>%
   dplyr::mutate(year = as.Date(paste(year, "-01-01", sep = "", format='%Y-%b-%d')))
+```
 
+``` r
 set_bbd_theme()
 
 ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
@@ -36,7 +33,7 @@ ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
        caption = "Source: Gapminder")
 ```
 
-<img src="man/figures/README-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
 
 ### An example using `ggtext`:
 
@@ -47,7 +44,7 @@ library(ggtext)
 data <- gapminder %>% 
   filter(year == 2007) %>% 
   mutate(rank = rank(gdpPercap)) %>% 
-  filter(rank > 132 | rank == 1)
+  filter(rank > 132)
 
 ggplot(data, aes(x = reorder(country, gdpPercap), 
                  y = gdpPercap, 
@@ -57,13 +54,13 @@ ggplot(data, aes(x = reorder(country, gdpPercap),
   coord_flip() +
   labs(y = "GDP per capita",
        x = element_blank(),
-       title = "The Wealthiest (and Poorest) Countries",
-       subtitle = "<span style='color:#00315B'>**Norway**</span> leads, the DRC lags",
+       title = "The Wealthiest Countries",
+       subtitle = "<span style='color:#00315B'>**Norway**</span> leads in GDP per capita",
        caption = "Source: Gapminder") +
   theme(plot.subtitle = element_markdown(lineheight = 1.1))
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
 
 ## Add the Bluebonnet Logo
 
@@ -81,10 +78,10 @@ plot <- ggplot(data = tx_vac, aes(x = tx_vac$long,
                    subtitle = "Among Kindergarteners", 
                    fill = "Percent\nVaccinated")
 
-add_bbd_logo(plot, scale = 1.5, position = "bottom left")
+add_bbd_logo(plot, scale = 1.5, position = "bottom right")
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="960" style="display: block; margin: auto;" />
 
 ``` r
 set_bbd_theme(style = "print")
@@ -110,14 +107,14 @@ plot <- ggplot(data = tx_vac_low, aes(x = reorder(subregion, avgvac),
        x = element_blank(),
        title = "The Least Vaccinated Counties",
        subtitle = "<span style='color:#00315B'>**Terry County**</span> has the lowest Kindergarten vaccination rate in Texas",
-       caption = "Source: DSHS") +
+       caption = "Source: Texas Department of State Health Services") +
   theme(plot.subtitle = element_markdown(lineheight = 1.1),
         legend.position = "none")
 
 add_bbd_logo(plot, scale = 1.5)
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="960" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="960" style="display: block; margin: auto;" />
 
 ### Palettes
 
@@ -129,4 +126,4 @@ p3 <- view_palette(palette = palette_bbd_sequential) + ggtitle("Sequential")
 gridExtra::grid.arrange(p1, p2, p3, nrow = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" style="display: block; margin: auto;" />
