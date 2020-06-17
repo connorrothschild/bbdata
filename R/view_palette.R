@@ -6,9 +6,6 @@
 #' @param palette A \code{palette_bbd_*} vector from \code{library(bbdata)}.
 #'   Options are `palette_bbd_main`, `palette_bbd_diverging`, `palette_bbd_politics`, and `palette_bbd_sequential`
 #'
-#' @examples
-#' view_palette(palette_bbd_main)
-#'
 #' @md
 #'
 #' @export

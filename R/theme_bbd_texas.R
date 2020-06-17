@@ -18,7 +18,14 @@ theme_bbd_texas <- function(scale = "continuous",
                            base_line_size = 0.5,
                            base_rect_size = 0.5) {
 
-  gg <- theme_bbd_print(base_size = 12, base_family = "Raleway",
+  # add font
+  ggplot2::theme_update(text = ggplot2::element_text(family = base_family))
+  ggplot2::update_geom_defaults("text", list(family = base_family))
+  ggplot2::update_geom_defaults("label", list(family = base_family))
+  ggplot2::update_geom_defaults("text_repel", list(family = base_family))
+  ggplot2::update_geom_defaults("label_repel", list(family = base_family))
+  
+  gg <- theme_bbd_print(base_size = 12, base_family = base_family,
                          base_line_size = 0.5,
                          base_rect_size = 0.5)
 

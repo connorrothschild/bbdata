@@ -4,7 +4,7 @@
 \alias{add_bbd_logo}
 \title{Bluebonnet Data \link{ggplot2} theme}
 \usage{
-add_bbd_logo(plot, position = "top right", scale = 1)
+add_bbd_logo(plot = ggplot2::last_plot(), position = "top right", scale = 1)
 }
 \arguments{
 \item{plot}{The plot object passed to \code{add_bbd_logo}}

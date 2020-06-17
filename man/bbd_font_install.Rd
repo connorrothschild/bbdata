@@ -4,7 +4,12 @@
 \alias{bbd_font_install}
 \title{Import and register Raleway}
 \usage{
-bbd_font_install()
+bbd_font_install(device = c("pdf", "win", "postscript"), force = FALSE)
+}
+\arguments{
+\item{device}{Font device. Options are 'pdf', 'win', and 'postscript.' Defaults to 'pdf.' For more on your system's font device, see https://github.com/wch/extrafont}
+
+\item{force}{Should the system force installation, even if Raleway is already present? You might select this option if you have since downloaded additional versions/faces of Raleway. Defaults to FALSE.}
 }
 \description{
 \code{bbd_font_install} tests to see if default fonts imported and registered. If Raleway are not imported and registered, then \code{bbd_font_install} imports and registers Raleway with \href{https://github.com/wch/extrafont}{library(extrafont)}.

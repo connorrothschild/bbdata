@@ -16,6 +16,13 @@ theme_bbd_print <- function(base_size = 11, base_family = "Raleway",
                              base_rect_size = 0.5) {
 
   half_line <- base_size / 2L
+  
+  # add font
+  ggplot2::theme_update(text = ggplot2::element_text(family = base_family))
+  ggplot2::update_geom_defaults("text", list(family = base_family))
+  ggplot2::update_geom_defaults("label", list(family = base_family))
+  ggplot2::update_geom_defaults("text_repel", list(family = base_family))
+  ggplot2::update_geom_defaults("label_repel", list(family = base_family))
 
   ggplot2::theme(
 

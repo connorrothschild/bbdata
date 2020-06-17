@@ -6,7 +6,7 @@
 \usage{
 theme_bbd_print(
   base_size = 11,
-  base_family = "Raleway",
+  base_family = "raleway",
   base_line_size = 0.5,
   base_rect_size = 0.5
 )

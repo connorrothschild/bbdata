@@ -12,7 +12,7 @@
 #' @param position The position of the logo. Options are "top left", "top right", "bottom right", and "bottom left"
 #' @md
 #' @export
-add_bbd_logo <- function(plot, position = "top right", scale = 1) {
+add_bbd_logo <- function(plot = ggplot2::last_plot(), position = "top right", scale = 1) {
 
   # Useful error message for logo position
   if (!position %in% c("top right", "top left", "bottom right", "bottom left")) {

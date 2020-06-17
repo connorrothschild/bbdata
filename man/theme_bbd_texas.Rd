@@ -7,7 +7,7 @@
 theme_bbd_texas(
   scale = "continuous",
   base_size = 12,
-  base_family = "Raleway",
+  base_family = "raleway",
   base_line_size = 0.5,
   base_rect_size = 0.5
 )

@@ -3,14 +3,14 @@
 #' Drops tick axes and axes labels
 #'
 #' @example \dontrun{
-#' plot + drop_axis(axis = "both")
+#' plot + bbd_drop_axis(axis = "both")
 #' }
 #'
 #' @param axis Axis to drop "x", "y", "both", or "neither". The function will keep whatever is not included in "drop."
 #'
 #' @md
 #' @export
-drop_axis <- function(axis = "both") {
+bbd_drop_axis <- function(axis = "both") {
 
   if (axis == "y") {
 

@@ -14,7 +14,3 @@ Options are \code{palette_bbd_main}, \code{palette_bbd_diverging}, \code{palette
 \code{view_palette} displays the colors and hexadecimal codes for \code{palette_bbd_*} vectors.
 These palettes were generated on www.coolors.co/.
 }
-\examples{
-view_palette(palette_bbd_main)
-
-}

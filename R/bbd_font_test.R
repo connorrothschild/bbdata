@@ -10,6 +10,6 @@ bbd_font_test <- function() {
   if (sum(grepl("[Rr]aleway*", extrafont::fonts())) == 0) {
     print("Raleway is not imported and registered. Install the font online and import and register using bbd_font_install(). If that presents problems, try using sysfonts::font_add('Raleway', regular = 'Raleway.ttf') with your downloaded font name taking the place of 'Raleway.ttf.'")
   } else {
-    print("Raleway is imported!")
+    print(paste("Raleway is imported! We found", sum(grepl("[Rr]aleway*", extrafont::fonts())), "instances of Raleway on your system."))
   }
 }

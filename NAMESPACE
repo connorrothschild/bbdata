@@ -2,11 +2,11 @@
 
 export(add_bbd_logo)
 export(bbd_colors)
+export(bbd_drop_axis)
+export(bbd_fix_bars)
 export(bbd_font_install)
 export(bbd_font_test)
 export(bbd_palettes)
-export(drop_axis)
-export(fix_bars)
 export(geom_bar)
 export(geom_col)
 export(geom_jitter)

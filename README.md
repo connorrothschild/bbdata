@@ -18,7 +18,7 @@ set_bbd_theme()
 ggplot(data = data, aes(x = year, y = gdpPercap/1000, fill = country)) +
   geom_area() +
   scale_x_date(expand = c(0,0)) +
-  fix_bars() +
+  bbd_fix_bars() +
   labs(title = "GDP Per Capita Over Time",
        subtitle = "Using the BBD Color Palette",
        x = "Year",
@@ -75,7 +75,7 @@ plot <- ggplot(data = tx_vac, aes(x = tx_vac$long,
 add_bbd_logo(plot, scale = 1.5, position = "bottom left")
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="960" style="display: block; margin: auto;" />
 
 ``` r
 set_bbd_theme(style = "print")
@@ -108,7 +108,7 @@ plot <- ggplot(data = tx_vac_low, aes(x = reorder(subregion, avgvac),
 add_bbd_logo(plot, scale = 1.5)
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="960" style="display: block; margin: auto;" />
 
 ### Palettes
 
